@@ -48,9 +48,6 @@ function editTicket(req,res){
             if(data[0].Nombre!==ticket.Nombre){
                 return res.status(400).send({error:true,mensaje:"No puedes editar el nombre del ticket!!"});
             }
-            if(data[0].Personal!=ticket.Personal){
-                return res.status(400).send({error:true,mensaje:"No puedes editar el personal del ticket!!"});
-            }
             const valido=validaTicket(ticket);
             if(valido.error){
                 return res.status(400).send({error:true,mensaje:valido.mensaje});
