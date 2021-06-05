@@ -62,6 +62,9 @@ export default {
                         })
                     }
                 })
+                this.$router.push({
+                    name:"Categorias"
+                })
             }else{
                 this.erroresValidacion=true
             }

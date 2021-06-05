@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <!-- ESTA VISTA CONTENDRA UNA VISTA con los tickets filtrados por categoria -->
-      <b-form-select v-model="Estatus" :options="opciones" @change="filtra"></b-form-select>
+      <b-form-select v-model="Estatus" :options="opciones" @input="filtra" class="btn"></b-form-select>
       <Table :busy="busy" :fields="fields" :items="filtro" :color="true"></Table>
   </div>
 </template>
@@ -55,7 +54,7 @@ export default {
     },
     created () {
         this.getTickets();
-        this.filtra();
+        this.filtra;
     }
 }
 </script>

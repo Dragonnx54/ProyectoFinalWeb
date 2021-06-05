@@ -26,6 +26,7 @@
             id="Telefono"
             titulo="Telefono"
             placeholder="Ingrese el Telefono"
+            tipo="number"
             :maxlength="10"
             :error="erroresValidacion && !validacionTelefono"
             mensajeError="El telefono debe ser de 10 digitos"
@@ -93,6 +94,9 @@ export default {
                             text:response.response.data.mensaje
                         })
                     }
+                })
+                this.$router.push({
+                    name:"Personal"
                 })
             }else{
                 this.erroresValidacion=true

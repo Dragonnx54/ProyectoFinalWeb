@@ -101,6 +101,9 @@ export default {
                         })
                     }
                 })
+                this.$router.push({
+                    name:"Tickets"
+                })
             }else{
                 this.erroresValidacion=true
                 console.log("error");
